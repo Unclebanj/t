@@ -1,0 +1,58 @@
+<?php
+require_once("connect_db.php");
+$conn = mysqli_connect($dbhost,$dbuser,$dbpw,$dbname);
+
+if(isset($_POST['details']) && isset($_POST['date']) && isset($_POST['number'])) {
+
+    $sql = "INSERT IGNORE INTO feedback(Description,Date,StudentID) VALUES('{$_POST['details']}','{$_POST['date']}','{$_POST['number']}')";
+    $query = $conn->query($sql);
+}
+if(!isset($_POST['details'] ))
+{
+    include 'validate.php';
+}
+else if ($query === TRUE){
+    header('Your feedback have been forwarded to KU Talent successfully');
+}
+
+else{
+
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+         <title>KU Talent CV Website</title>
+         <link href="maincssstyle.css" rel="stylesheet">
+         <script type = "text/javascript">
+         </script>
+         </head>
+<body>
+<div class ="feedback_header">
+    <img src = "ku logo.jpg" alt = "logo"/>
+    <h4>KU Talent Feedback</h4>
+</div>
+<div class = "feedback_container">
+    <form name ="feedback" method ="post" action ="feedback.php">
+        <h5>K Number</h5>
+        <input type ="text" name ="number" id="number" placeholder = "Enter ID number"/>
+        <h5>Date</h5>
+        <input type ="text" name ="date" id="name" placeholder = "Date"/>
+        <h5>Details</h5>
+        <input type ="text" name ="details" id="details"  style = "height:150px; width:500px; margin:10px;"/>
+        <br>
+        <input type= "submit" name ="send" value = "Send"/>
+        <input type= "submit" name ="cancel" value = "Cancel"/>
+    </form>
+    <hr>
+    <footer style = "text-align:center;">Kingston University  www.kingston.ac.uk   2017</footer>
+    </div>
+
+    </body>
+    </html>
