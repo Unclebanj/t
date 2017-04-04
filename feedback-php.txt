@@ -1,24 +1,20 @@
+
 <?php
-require_once("connect_db.php");
+require_once("connect_db.php"); // it allows connection to controller page
 $conn = mysqli_connect($dbhost,$dbuser,$dbpw,$dbname);
+// this post method allows to insert info into the database
 
-if(isset($_POST['details']) && isset($_POST['date']) && isset($_POST['number'])) {
 
-    $sql = "INSERT IGNORE INTO feedback(Description,Date,StudentID) VALUES('{$_POST['details']}','{$_POST['date']}','{$_POST['number']}')";
-    $query = $conn->query($sql);
-}
-if(!isset($_POST['details'] ))
-{
-    include 'validate.php';
-}
-else if ($query === TRUE){
-    header('Your feedback have been forwarded to KU Talent successfully');
-}
+    if (isset($_POST['details']) && isset($_POST['date']) && isset($_POST['number'])) {
 
-else{
-
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+        $sql = "INSERT INTO feedback(Description ,Date, StudentID) VALUES('{$_POST['details']}','{$_POST['date']}','{$_POST['number']}')";
+        $query = $conn->query($sql);
+        if ($query === TRUE) {
+            echo 'Your feedback have been forwarded to KU Talent successfully';
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +39,12 @@ else{
         <h5>K Number</h5>
         <input type ="text" name ="number" id="number" placeholder = "Enter ID number"/>
         <h5>Date</h5>
-        <input type ="text" name ="date" id="name" placeholder = "Date"/>
+        <input type ="date" name ="date" id="name" placeholder = "Date"/>
         <h5>Details</h5>
-        <input type ="text" name ="details" id="details"  style = "height:150px; width:500px; margin:10px;"/>
+        <textarea name ="details" id="details"  style = "height:150px; width:500px; margin:10px;"></textarea>
         <br>
         <input type= "submit" name ="send" value = "Send"/>
-        <input type= "submit" name ="cancel" value = "Cancel"/>
+        <input type= "reset" name ="cancel" value = "Cancel"/>
     </form>
     <hr>
     <footer style = "text-align:center;">Kingston University  www.kingston.ac.uk   2017</footer>
