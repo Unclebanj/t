@@ -1,0 +1,49 @@
+<?php
+require_once('connection.php');
+  
+ $user =$_POST['username'];
+ $pass =$_POST['password'];
+
+$error = [];// setting an array for errors
+    
+ if(isset($user) && isset($pass)){
+   session_unset($user);    
+ session_unset($pass);
+}
+    if (empty($user)){
+     $error[]= "Please Enter Your Username"; 
+     }
+    if(empty ($pass)){
+        $error[]= "Please Enter Password";
+    }
+         
+      if(empty($error)){   
+      $empsql = "SELECT * FROM employer INNER join employerpermission ON employer.employerID = employerpermission.employerID WHERE Username ='$user' and Employerpassword = '$pass'";  
+      
+     
+      $data = $conn->query($empsql);
+      $rows = $data->num_rows;
+    
+     if($rows == 1){
+         $db = $data->fetch_array(MYSQLI_ASSOC);
+         
+        session_start();
+        $_SESSION['username'] = $user;
+        $_SESSION['password'] = $pass;
+         
+         
+        $_SESSION['id']= $db['EmployerID'];
+        $_SESSION['fname'] = $db['Employername'];
+        $_SESSION['lname'] = $db[''];
+        $_SESSION['level'] = $db['Accesslevel'];
+         
+         
+        header('Location:welcome.php');
+     }
+ else {
+    
+     header('Location: authenticate.php?message=Username_AND_Password_Invalid');
+     }
+    }
+?>
+
