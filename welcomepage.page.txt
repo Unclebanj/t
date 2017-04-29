@@ -1,0 +1,276 @@
+<?php
+session_start();
+require_once 'connection.php';
+
+if(!isset($_SESSION['username'])){
+  header('Location:accesslogin.php');
+}
+
+?>
+<!doctype html>
+<html>
+<head>
+<title>Welcome Page</title>
+<link href="maincssstyle.css" rel="stylesheet">
+ <script type = "text/javascript">
+	  function download(){
+	  window.location.href = 'download.php';
+	  }
+      function addcat(){
+	   window.location.href = 'addcategory.php';
+	  }
+	  function status(){
+	    window.location.href = 'status.php';
+	  }
+	   function upload(){
+	    window.location.href = 'upload.php';
+	  }
+	   function logout(){
+	    window.location.href = 'logout.php';
+	  }
+      function password(){
+	    window.location.href = 'generatepassword.php';
+	  }
+     function registeration(){
+	    window.location.href = 'registeration.php';
+	  }
+     function feedback(){
+	    window.location.href = 'feedback.php';
+	  }
+     function enquiries(){
+	    window.location.href ='viewcontact.php';
+	  }
+     function empdownload(){
+	    window.location.href ='employerdownload.php';
+	  }
+     function manage(){
+	    window.location.href ='managecategory.php';
+	  }
+      function employer(){
+	    window.location.href ='employerlist.php';
+	  }
+      function edit(){
+	    window.location.href ='edituser.php';
+	  }
+     
+     function contact(){
+         window.open('KUContact.html','newwindow',config='height=200, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, directories=no, status=no');
+         if(window.focus){
+             newwindow.focus();
+         }
+         return false;
+	  }
+     function edituser(){ 
+	 var modal = document.getElementById("myModal");
+     var btn = document.getElementById("edit");
+     var span = document.getElementsByClassName("close")[0]; 
+     btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+}
+	  </script>
+</head>
+<body>
+    <div class="containerz">
+     <div class = "header">
+       <img src = "images/ku%20logo.JPG" alt = "logo" style = "height:100px;"/>
+      <h4> KU TALENT</h4>
+    </div>
+    <div id="help_nav">
+<ul>
+ <li><a href ="home.php">Home</a></li>
+ <li><a href ="about.php">Using KU Talent</a>
+    <li><input type = "button" value = "Logout" style = "position:relative; left:820px; top:1px;" onclick = "logout()"><span class="icon-search"></span></li>    
+        </ul>
+    </div>
+    <div id = "welcome_info">
+         <?php 
+    print '<p style = "color:blue;margin-left:5em;"><b>ID: K' .$_SESSION['id']."</b></p>";
+    print '<p style ="color:blue; margin-left:5em;"><b>Name: '. $_SESSION['fname'].'  '.$_SESSION['lname']."</b></p>"; 
+    ?>
+        <div class = "welcometext">
+            
+        <h3 style="position:relative; top:6em; text-align:center;">TO KU TALENT</h3>
+        </div>
+    </div>
+    <p>As a career governing body within the university we aim to facilitate all students across all facultys into gain industial experience.<br>
+    The program will help into developing job resumes, advice on interview techniques and methods on how to network with industry brands</p>
+    <br>
+    <div class = "access">
+<form action = "connection.php" method = "post">
+    <?php if($_SESSION['level'] == 1): ?>
+        <div>
+        <form method = "post" action= "uploadconnect.php">
+            <div class = "wrow">
+                <div class ="six">
+           <img src = "images/view.jpg" alt = "logo" style="height:8em;"/> 
+                <br>
+          <input type="button" value= "VIEW STATUS/FEEDBACK" onClick = "status()" />
+            </div>
+            <div class ="five">
+           <img src = "images/upload.jpg" alt = "logo" style="height:8em;"/> 
+                <br> 
+         <input type="button" value= "UPLOAD CV" onClick = "upload()"/>
+            </div>
+            </div>
+        </form>
+            <footer>KU Talent www.kingston.ac.uk   2017</footer>
+    </div>
+    <?php endif; ?>
+    
+    <?php if($_SESSION['level'] == 2): ?>
+        <div>
+        <form method = "post" action= "connection.php">
+            <?php
+            $sql = "SELECT COUNT(DISTINCT Filenumber)AS NumberOfNewCVsUploaded FROM cv WHERE Status IS null;";
+           $res= $conn->query($sql);
+            while($row = $res->fetch_array(MYSQLI_ASSOC)){
+                 echo '<div style="border:1px solid #aaa; border-radius:5px; border-style:inset; text-align:center; width:20em; margin-left:35em;background-color:cadetblue; color:black;">'; 
+                print 'New Notification';
+                print '<br>';
+                print '<strong>New Uploaded CVs:</strong> '. $row['NumberOfNewCVsUploaded'];
+                echo '</div>';
+                $_SESSION['cvs'] = $row['NumberOfNewCVsUploaded'];
+            }
+            ?>
+          <div class = "wrow">
+               <div class ="two">
+                 <img src = "images/contact.jpg" alt = "logo" style="height:8em;  background:linear-gradient(cadetblue,black);"/> 
+                <br>   
+            <input type="button" value="CONTACT EMPLOYER" onClick = "employer()"/>
+              </div>
+             <div class ="two">
+                 <img src = "images/inser.jpg" alt = "logo" style="height:8em; "/> 
+                <br>   
+             <input type="button" value= "ADD NEW CATEGORY" onClick = "addcat()" />
+              </div>  
+            <div class ="two">
+                 <img src = "images/downloads.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+              <input type="button" value="DOWNLOAD CV" onClick = "download()"/>
+              </div>  
+            <div class ="two">
+                 <img src = "images/feedback.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+                <input type="button" value= "STUDENT ENQUIRIES" onClick = "enquiries()" />
+              </div>
+             <div class ="two">
+                 <img src = "images/password.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+                <input type="button" value="GENERATE PASSWORD" onClick = "password()"/>  
+              </div> 
+            </div>
+              <footer>KU Talent www.kingston.ac.uk   2017</footer>
+        </form>
+    </div>
+    <?php endif; ?>
+
+    <?php if($_SESSION['level'] == 0): ?>
+        <div>
+        <form method = "post" action= "connection.php">
+            <div class = "wrow">
+               <div class ="two">
+                 <img src = "images/manage.jpg" alt = "logo" style="height:8em; background:linear-gradient(cadetblue,black);"/> 
+                <br>   
+            <input type="button" value="MANAGE CATEGORIES" onClick = "manage()"/>
+              </div>
+                <div class ="two">
+                 <img src = "images/adduser.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+               <input type="button" value= "ADD USER" onClick = "registeration()" />
+              </div>
+             <div class ="two">
+                 <img src = "images/edituser.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+               <input type="button" id="edit" value="EDIT USER" onClick ="edituser()"/>
+              </div>
+          <div class ="two">
+            <img src = "images/deleteuser.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+                <input type="button" value= "DELETE USER" onClick = "" />
+              </div>
+                <div class ="two">
+                 <img src = "images/deletecv.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+                <input type="button" value= "DELETE CV" onClick = "" />
+              </div>
+            </div>
+        </form>
+              <footer>KU Talent www.kingston.ac.uk   2017</footer>
+    </div>
+    <?php endif; ?>
+    
+    <?php if($_SESSION['level'] == 3):?>
+        <div>
+        <form method = "post" action= "connection.php">
+             <?php if(isset($_POST['empdownloads'])){$_SESSION['empdownload'] = $_POST['empdownloads'];}?>
+            <?php
+            echo '<div style="color:red;">'; 
+            echo '<strong>Your Password Expires '.$_SESSION['expiry'] . ' at 23:59</strong>';
+            echo '</div>';
+            
+            $user= $_SESSION['username'];
+
+            
+            $sqlc ="SELECT Categoryname from category INNER JOIN employer ON category.CategoryID = employer.CategoryID
+            WHERE employer.Username= '$user';";
+            
+           $res= $conn->query($sqlc);
+            while($row = $res->fetch_array(MYSQLI_ASSOC)){
+                 echo '<div style="border:transparent; border-style:inset; text-align:center; width:20em; margin-left:35em;background-color:cadetblue; color:black;">'; 
+                 print 'New Notification';
+                 print '<br>';
+                 print '<strong>Category:</strong> '.$row['Categoryname'];
+                 print '<br>';
+                 echo '</div>';
+            }
+            
+            $sqls ="SELECT COUNT(DISTINCT Filenumber)AS NumberOfCompletedCVs FROM cv INNER JOIN employer ON cv.CategoryID = employer.CategoryID WHERE Status = 'completed'AND Username ='$user';";
+           $res= $conn->query($sqls);
+            while($row = $res->fetch_array(MYSQLI_ASSOC)){
+                 echo '<div style="transparent; text-align:center; width:20.4em; margin-left:35em;background-color:cadetblue; color:black;">'; 
+                print '<strong>Completed CVs to View:</strong> '. $row['NumberOfCompletedCVs'];
+              echo '</div>';
+            }
+            ?>
+            <br>
+             <div class = "wrow">
+               <div class ="six">
+                 <img src = "images/contact.jpg" alt = "logo" style="height:8em;"/> 
+                <br> 
+        <input type="button" value= "CONTACT KU" onClick = "contact()" />
+                 </div>
+          <div class ="five">
+                 <img src = "images/downloads.jpg" alt = "logo" style="height:8em;"/> 
+                <br>   
+              <input type="button" name= "empdownloads" value="DOWNLOAD CV" onClick = "empdownload()"/>
+              </div>         
+            </div>
+        </form>
+    </div>
+    <?php endif; ?>
+    </form>
+            <div id="myModal" class="modal">
+             <div class="modal-content">
+         <span class="close">&times;</span>
+     <form method="post" action="editdb.php">
+    <p>Enter ID <input type=text name="editusers" placeholder="Enter ID" required /></p>
+         <p><input type ="radio" name="staff" value="student" checked/>Student</p>
+           <p><input type ="radio" name="staff" value="kustaff" checked/>KU Staff </p>
+     <p><input type="submit" name="sub" value="OK" /></p>
+          </form>
+    </div>
+        </div>
+    </div>
+    	<footer style="color:white;">Kingston University  www.kingston.ac.uk   2017</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1246 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+.container{
+    background: linear-gradient(cadetblue, black);
+     width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+.containerz{
+    background: linear-gradient(black,cadetblue,white, white);
+     width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.header{
+     background: linear-gradient(cadetblue,black);
+	 height:110px;
+     background-position:static;
+    border-radius: 5px;
+     }
+
+.header img{
+	      height:100px;
+	      width: 100px;
+          }
+
+.header h4{
+		 font-family:fantasy;
+	     background: -webkit-linear-gradient(silver, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+		 text-align:center;
+		 bottom:140px; 
+		 position:relative;
+		 font-size:50px;	 
+         }
+.header button{
+	position:relative;
+	left:1250px;
+	bottom:250px;
+	
+}
+.header a{
+	text-decoration:none;
+}
+
+nav{
+	    clear:both;
+	    color:white;
+	    background: linear-gradient(white, silver);
+	    height:45px;
+		float:left;
+		margin:5px;
+		width:100%;
+       text-decoration:none;
+}
+nav a{
+     text-decoration:none;
+}
+
+li{
+	margin-left: 25px;
+	margin-right: 25px;
+	display:inline;
+}
+
+input[type = button]{
+	border-radius:5px;
+	padding:5px;
+	width:174px;
+	display:inline-block;
+	margin-left:20px;
+	margin-right:25px;
+    background:linear-gradient(white, gray);
+    border:none;
+	float:left;
+}
+
+input[type = button]:hover{
+	 background:white;
+   
+}
+input[type=submit]{
+    border-radius:0.5em;
+}
+button{
+    background-color: white;
+    border-radius:0.5em;
+    color: blue;
+}
+
+.row3 .nine{
+	height:50px;
+   
+  
+}
+
+.row5 .three{
+	
+	padding:10px;
+    background:linear-gradient(cadetblue,black);
+
+}
+
+.section1{
+	height:160px;
+	border:1px solid;
+	border-color:transparent;
+    float: left:
+	
+}
+
+.section1 table{
+	width:890px;
+	height:20px;
+	margin:22px;
+	float:left;
+}
+
+.section1 table th{
+color:white;	
+position:relative;
+left:15em;
+}
+
+.section1 table tr td[type = button]:hover{
+background-color:brown;
+}
+
+.section1 nav ul li a{
+	color:black;
+	text-decoration:none;
+	font-size:15px;
+}
+.section1 nav ul li a:hover{
+	color:red;
+}
+
+.section2{
+	 position:relative;
+	 height:14em;
+	 float:left;
+     width:120em;
+}
+.section2 a img{
+    width: 95em;
+    height: 20em;
+    padding:10px;
+    border:0;
+    margin-left: 10em;
+}
+
+.sidebar1 table{
+	border:1px solid;
+	border-color:black;
+    width:82em;
+  
+}
+.sidebar1{
+    background:linear-gradient(black,cadetblue);
+
+}
+.sidebar2 table{
+	border:1px solid;
+	border-color:transparent;
+	width:300px;
+	border-radius:5px;
+	background:linear-gradient(cadetblue,cadetblue);
+	border-style:inside;
+	color:white;
+    display:inline-block;
+    margin:70px;
+}
+
+.sidebar2 table th{
+	border:1px solid;
+	border-color:transparent;
+    
+  
+}
+.sidebar1 table th{
+	color:white; 
+	border-radius:5px;
+}
+
+.checkbox{
+    position:relative;
+    left:35em;
+    color:white;
+}
+
+.section3{
+	 height:200px;
+	 display:inline;
+}
+
+
+.footer{
+	text-align:center;
+	color:black;
+	position:relative;
+	top:100px;
+}
+footer{
+   margin-left: 38em;
+}
+
+.help_header{
+	height:100px;
+	background:linear-gradient(black,cadetblue);
+}
+.help_header img{
+	height:100px;
+	width:100px;
+	float:left;
+	
+}
+.help_header h4{
+	position:relative;
+	text-align:left;
+	top:50px;
+	left:340px;
+	color:white;
+	font-size:20px;
+}
+
+.help_header button{
+	position:relative;
+	left:1100px;
+	bottom:30px;
+	padding:2px;
+}
+
+.help_header button a{
+text-decoration:none;
+}
+
+.help_header input[type =text]{
+	width:300px;
+	left:550px;
+	position:relative;
+	padding:8px;
+	border:1px solid;
+	border-color:#999999;
+}
+
+#help_nav{
+	background-color:silver; 
+	height:30px;
+}
+
+#help_nav li{
+	position:relative;
+	margin:0px;
+	padding:0px;
+    float:left;
+}
+
+
+#help_nav li:hover ul{
+	display:block;
+    
+}
+
+#help_nav li a:hover{
+	color:red;
+}
+
+#help_nav a{
+	color:black;
+	padding:30px;
+	text-decoration:none;
+	font-size:18px;
+}
+
+
+#help_nav ul ul {
+    position:absolute;
+	width:160px;
+	right:10px;
+	left:0px;
+	display:none;
+	padding:12px 16px;
+    margin:9px;
+	background:linear-gradient(cadetblue,cadetblue);
+    z-index: 0px;
+	box-shadow:silver;
+}
+
+#help_nav ul ul li a{
+	color:black;
+	text-decoration:none;
+	display:inline-block;
+	font-size:15px;
+    padding:5px;
+	
+}
+
+.container1{
+	border:1px solid;
+	height:250px;
+	border-color:white;
+	background-color:white;
+}
+
+	
+.container1 h4{
+	font-size:25px;
+	position:relative;
+	left:30px;
+	padding:5px;
+	display:block;
+	
+}
+.container1 table{
+	margin:0px;
+	float:left;
+
+
+}
+.container1 table tr td{
+	height:35px;
+   
+}
+
+.container1 input[type = button]:hover{
+	 background:linear-gradient(white,gray);
+}
+
+#helpinfo img{
+	left:400px;
+	position:relative;
+	width:220px;
+	bottom:35px;
+}
+.helpinfos{
+    position:absolute;
+    bottom:20em;
+    left:30em;
+    width:50em;
+}
+
+.container2{
+	border:1px solid;
+	height:300px;
+    background-color:white;
+    border-color: white;
+}
+.container2 h4{
+	position:relative;
+	left:35px;
+	font-size:25px;
+	font-family:arial;
+    color: black;
+}
+.container2 #firstinfo{
+	border: 1px solid;
+	width:400px;
+	border-color:white;
+	left:25px;
+	position:relative;
+	background:linear-gradient(#efefef,cadetblue);
+}
+.container2 h6{
+	font-size:12px;
+	font-family:arial;	
+}
+
+.container2 #secondinfo{
+	border: 1px solid;
+	width:400px;
+	height:150px;
+	border-color:white;
+	left:460px;
+	bottom:152px;
+	position:relative;
+	background:linear-gradient(#efefef,cadetblue);
+}
+
+.container2 #thirdinfo{
+	border: 1px solid;
+	width:400px;
+	border-color:white;
+	left:900px;
+	bottom:305px;
+	position:relative;
+	background:linear-gradient(#efefef,cadetblue);
+}
+
+.container3{
+	border-top:1px solid;
+	height:300px;
+	border-color: silver;
+  
+}
+.container3 h4{
+	font-size:20px;
+	text-align:center;
+	font-family:arial;
+}
+.container3 table{
+	display:block;
+	position:relative;
+	left:63px;
+}
+.container3 table tr td{
+	width:248px;
+	height:20px;
+	border:1px solid;
+	border-color:silver;
+    
+}
+.container3 input[type = button]{
+	width:305px;
+	margin:-2px;
+	height:200px;
+	background:linear-gradient(gray,silver);
+	
+}
+.container3 input[type = button]:hover{
+	 background:silver;
+} 
+
+
+.about_header{
+	height:100px;
+	background:linear-gradient(black,cadetblue);
+	background-position:static;
+    width:100%;
+    
+}
+.about_header img{
+	height:100px;
+	width:100px;
+	float:left;
+	
+}
+.about_header h4{
+	position:relative;
+	text-align:center;
+	top:50px;
+	left:0px;
+	color:white;
+	font-size:20px;
+}
+.about_header nav{
+	background-color:silver;
+}
+.about_header li a{
+	color:black;
+	text-decoration:none;
+	padding:30px;
+}
+
+.about_header li a:hover{
+	color:red;
+	
+}
+.about_container article{
+	margin:80px;
+	border: 1px solid;
+	border-color:silver;
+	height:350px;
+	background:linear-gradient(white,silver,white);
+	width:750px;
+	left:200px;
+	position:relative;
+}
+.about_container img{
+	position:relative;
+	left:200px;
+	margin:40px;
+}
+.about_container p{
+	color:black;
+}
+
+.login_header{
+	height:100px;
+	background:linear-gradient(black,cadetblue);
+	background-position:static;
+
+}
+
+.login_header img{
+	height:100px;
+	width:98px;
+	float:left;
+	
+}
+.login_header h4{
+	position:relative;
+	text-align:center;
+	top:50px;
+	left:200px;
+	color:white;
+	font-size:20px;
+	font-family:arial;
+}
+
+.login_header h4{
+	text-align:left;
+}
+
+.login_header nav ul li a{
+	text-decoration:none;
+	top:10px;
+	color:black;
+}
+
+.login_container{
+	position:relative;
+	left:150px;
+	border:1 px solid;
+	background:linear-gradient(cadetblue,black);
+	width:850px;
+	height:200px;
+	float:center;
+	margin:121px;
+}
+
+.login_container h5{
+	font-size:25px;
+	font-family:arial;
+	color:white;
+}
+.login_header nav ul ul {
+    position:absolute;
+	width:160px;
+	left:120px;
+	display:none;
+	padding:12px 16px;
+    margin:10px;
+	background:linear-gradient(silver,white,silver);
+    z-index: 1px;
+	box-shadow:silver;
+}
+.login_header nav li:hover ul{
+	display:block;
+}
+.sauthenticate_header{
+background:linear-gradient(black,cadetblue);
+width:100%;
+height:12em;
+background-image: linear-gradient(black,cadetblue), url('images/student.jpg');
+background-blend-mode:darken;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.authenticate_header{
+background:linear-gradient(black,cadetblue);
+width:100%;
+height:12em;
+background-image: linear-gradient(black,cadetblue), url('');
+background-blend-mode:darken;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.sauthenticate_container{
+	border:1px solid;
+	border-color:white;
+    border-radius:5em;
+	width:600px;
+	height:350px;
+	margin-left:10px;
+	float:left;
+    position: relative;
+    left:28%;
+    background:linear-gradient(cadetblue,cadetblue);
+    border-radius:5px;
+
+}
+
+.authenticate_container{
+	border:1px solid;
+	border-color:gray;
+	width:600px;
+	height:350px;
+	margin-left:10px;
+	float:left;
+    position: relative;
+    left:28%;
+    background:linear-gradient(cadetblue,black);
+    border-radius:5px;
+}
+.authenticate_container p{
+	text-align:center;
+    color:black;
+}
+.authenticate_container input[type = button]{
+	background:silver;
+}
+.erow .three{
+    width:40em;
+}
+
+.reset_password form{
+    border:1px solid;
+    border-color:gray;
+    width:50%;
+    position:relative;
+    left:40%;
+}
+.side{
+ float:right;
+    width:15em;
+    
+}
+.contact_container{
+	width:700px;
+	background-color:#e6e6fa;
+	margin:60px;
+    float: left;
+}
+blockquote{
+	width:300px;
+	font-style:italic;
+	border-bottom:1px solid #665544;
+	border-top:1px solid #665544;
+	padding:0px;
+    margin:7em;
+    float:right;
+
+}
+.banner{
+ position:relative;
+top:450px; 
+display:inline;
+left:1000px;
+}
+.upload_container{
+	border: 1px solid;
+	width:700px;
+	height:350px;
+	position:relative;
+	left:300px;
+    top:50px;
+	border-color:darkslategrey;
+    border-radius:10px;
+    float:left;
+    background: linear-gradient(white,white);
+
+}
+.upload_container h4{
+ color:blue;
+ text-align:center;
+ border-color:lightgrey;
+}
+.upload_container form input[type= button]{
+background-color:gray;
+position:relative;
+left:250px; 
+padding:5px;
+top:50px;	
+}
+
+.status{
+    text-align: center;
+    border-radius: 2px;
+}
+
+h1{
+    color:black;
+    font-family:Arial;
+}
+
+.downloadbutton{
+    width:100%;
+    text-align:center;
+    float: left;
+    height: 10em;
+}
+    
+}
+.downloadbutton input[type = button]{
+    border-radius:5px;
+    border-color:silver; 
+    margin-left:13em; 
+    height:4em; 
+    width:20em;
+}
+.nine fieldset{
+    width:600px;
+    text-align:center;
+    border-color: transparent;
+    float: left;
+    margin-left:2em;
+    height: 23em;
+    margin: 2em;
+}
+.three fieldset{
+    width:200px;
+    float:left;
+    margin-left:2em;
+    margin: 2em;
+}
+.ten{
+    width:80%;
+    text-align:center;
+    float: left;
+    background-image:linear-gradient(white,aliceblue),url('images/download.JPG');
+    background-blend-mode:darken;
+    background-repeat: no-repeat;
+    background-position:center;
+    height: 70%;
+    border: 1px solid;
+    border-color:transparent;
+    margin-left: 8em;
+}
+#welcome{
+    width:100%;
+}
+#welcome_info{ 
+    width: 100%;
+    height:250px;
+    background-image: linear-gradient(white, white);
+}
+
+.welcometext{ 
+    background-image:linear-gradient(white,cadetblue),url('images/kutalent.JPG');
+    background-blend-mode:darken;
+    background-repeat: no-repeat;
+    background-position:center;
+    height:20px;
+    border-style: hidden;
+}
+
+h4{
+     text-align:center; 
+     font-style:Algerian;
+     color:white;
+}
+h2{
+     text-align:center; 
+     font-style:italic;
+     color:white;
+    font-family:Calbri light;
+}
+.welcometext{
+    border: 1px solid;
+    border-radius:10px;
+    width:500px;
+    margin-left:35%;
+    margin-right:50%;
+    border-color:transparent;
+    height:160px;
+}
+
+p{
+    text-align: center;
+}
+
+.wrow .six{
+   margin-left:20em;
+    
+}
+.wrow .six input[type=button]{
+    position: relative;
+    right: 3em; 
+}
+.wrow .five{
+    left:25em;
+    position:relative;
+    bottom:8em;
+}
+.wrow .five input[type=button]{
+    position:relative;
+    left:38em;
+    
+}
+.wrow .two{
+    display:inline-block;
+    margin:1em;
+    
+}
+.wrow .two input[type=button]{
+    position: relative;
+    left: -2em;
+}
+.select1{
+top:200px;	
+}
+
+.select2{
+    position: relative;
+    left:480px;
+    bottom:20px;
+}
+
+#terms{
+	float:left;
+	position:relative;
+	color:blue;
+    top:60px;
+}
+
+.upload_button{
+    position: relative;
+    left:300px;
+    top:20px;
+    width: 250px;
+}
+
+.category_container{
+	border:1px solid;
+	border-color:silver;
+    border-style: inset;
+	width: 800px;
+	height:250px;
+	margin-left:18em;
+    padding:1em;
+    background: linear-gradient(white,cadetblue);
+	
+}
+.category_container input[type = text]{
+	margin:10px;
+}
+.category_container input[type = button]{
+ position:relative;
+ left:50px;
+ top:20px;
+}
+.category_container input[type = button]:hover{
+	background-color:gray;
+}
+
+.generate_container{
+	border:1px solid;
+	border-color:silver;
+    border-style:outset;
+	width: 900px;
+	height:300px;
+	position:relative;
+	left:180px;
+    margin:60px;
+    background-image: url('images/employer.jpg');
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-blend-mode:darken;
+}
+
+.form1{
+	margin-left:20em;
+    
+}
+
+
+.generate_container input[type = button]:hover{
+background-color:gray;
+}
+.generate_container h1{
+text-align:center;
+    color: black;
+}
+		
+.search input[type=button]:hover{
+ background-color:gray;
+ }
+.col3 .aside{
+    height:25em;
+    border: 1px solid;
+    border-style: outset;
+    border-color:cadetblue;
+    width:15em;
+    float:left;
+    margin-left:2em;
+    background-color: aliceblue;
+}
+
+.col3 .admin_category{
+    width:25%;
+    height:21em;
+    border: 1px solid;
+    border-radius:1em;
+    border-style: outset;
+    border-color: silver;
+    margin-left:5em;
+    float: left;
+    padding:2em;
+     background:linear-gradient(white, cadetblue);
+    box-shadow:0.3em 0em gray;
+}
+.col9 .admin_category{
+    width:34%;
+    height:25em;
+    border: 1px solid;
+    border-radius:1em;
+    border-style: outset;
+    border-color: silver;
+    margin-top:3em;
+    margin-left:50em;
+    background:linear-gradient(white, cadetblue);
+     box-shadow:0.3em 0em gray;
+} 
+.col9 .admin_category h3{
+    color:gray;
+    font-size:20px;
+    text-align: center;
+    
+}
+
+.col9 .admin_category form input[type=text]{
+  padding:1em;  
+    
+}
+.feedback_header{
+	height:100px;
+	background:linear-gradient(black,cadetblue);
+	background-position:static;
+}
+.feedback_header img{
+	height:100px;
+	width:100px;
+	float:left;
+	
+}
+.feedback_header h4{
+	position:relative;
+	text-align:center;
+	top:50px;
+	left:0px;
+	color:white;
+	font-size:20px;
+}
+.feedback_container{
+	margin-left: 15em;
+}
+
+
+
+.footer{
+	background-color:cadetblue;
+    color:white;
+}
+
+.register_container{
+	position:relative;
+	left:400px;
+	width:650px;
+}
+
+.register_form{
+ padding: 40px; 
+ border: 1px solid;
+ border-color:silver;
+ border-radius:25px;
+}
+
+.register_form h3{
+	text-align:center;
+	font-family:lucida fax;
+}
+.register_form input[type = text]{
+	margin:10px;
+}
+
+.register_form input[type = submit]{
+	position:relative;
+	left:250px;
+}
+.edit_form{
+ padding: 40px; 
+ border: 1px solid;
+ border-color:aliceblue;
+ background:linear-gradient(aliceblue,white);
+
+}
+
+.edit_form h3{
+	text-align:center;
+	font-family:lucida fax;
+}
+.edit_form input[type = text]{
+	margin:10px;
+    width: 30em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.edit_form input[type = password]{
+	margin:10px;
+    width: 30em;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.edit_form input[type = textarea]{
+	margin:10px;
+    width: 30em;
+    border-radius:0.5em;
+    padding: 0.5em;
+    height: 5em;
+}
+
+.edit_form input[type = submit]{
+	position:relative;
+	left:250px;
+}
+.viewcontact{
+    width:900px;
+    height:380px;
+    background-color:white;
+    margin-left:200px;
+    padding:20px;  
+}
+.viewcontact table tr th{
+    background-color: silver;
+}
+#status1{
+    height:5.5em;
+    font-size:20px;
+    margin:1.7em;
+}
+
+#viewfeedback{
+    font-size: 10px;
+    height:10em; 
+    font-size:20px;
+}
+
+#footer{
+    height:15em;
+    border-radius: 5px;
+}
+legend{
+    color:black;
+}
+
+
+label{
+    color:black;
+     width:5em;
+}
+fieldset{
+    border-radius: 5px;
+    border-color:white;
+    
+   
+}
+
+.row3 #tabs{
+    border:1px solid;
+    border-color:silver;
+    display: inline-block;
+    margin:25px;
+    border-style:outset;
+   
+}
+.row3 #tab{
+    margin-left:150px;
+    display: inline-block;
+    border:1px solid;
+    border-color:silver;
+     border-style:inset;
+}
+#footer_container{
+  	background-color:cornsilk;
+    height:100px;
+    color: black;
+}
+.col6 .emplist{
+    background:linear-gradient(white,cadetblue,white);
+    width:35%;
+    margin-left:2em;
+    margin-top:1em;
+    float:left;
+   
+}
+.emplist table tr td{
+    padding:5px;
+    background-color: aliceblue;
+
+}
+.emplist table tr td button{
+  height:30px;
+    width:450px;
+    border-radius: 5px;
+   	background:linear-gradient(white,cadetblue);
+    color:black;
+}
+.col3 .emphistory{
+    width:22%;
+    height:30em;
+    border: 1px solid;
+    border-radius:1em;
+    border-style: outset;
+    border-color: silver;
+    margin-top:5em;
+    margin-left:1em;
+    float: left;
+    background:linear-gradient(white,cadetblue);
+ 
+}
+.col9 .empdetails{
+    width:34%;
+    height:15em;
+    border: 1px solid;
+    border-radius:1em;
+    border-style: outset;
+    border-color: silver;
+    margin-top:8em;
+    float: left;
+    background:linear-gradient(white,cadetblue);
+    margin-left: 2em;
+    
+}
+.col9 .empdetails h5{
+    color:gray;
+    font-size:20px;
+    text-align: center;
+    
+}
+#contact{
+  position:relative;
+  margin-left:30em; 
+  display:none; 
+  border:1px solid;
+  border-color:silver;
+  border-radius:1em; 
+  width:20em; 
+  background-color:green; 
+  color:white;  
+}
+
+.drow7 .two .col3 {
+  margin:3.5em; 
+  
+}
+ .show{display:block;
+}
+
+.helplinebtn{
+    background-color: aliceblue;
+    border: none;
+   cursor:pointer;
+}
+.row10{
+   position: relative;
+}
+#wrapper {
+   
+    width:100%;
+}
+.nav1{
+    background-color:cadetblue;  
+}
+#downloads{
+     width:100%;
+    float: left;
+    height: 5em;
+    margin-top: 4em;
+    
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.validate{
+    height:120px;
+  
+}
+.validate img{
+  height:80px;   
+}
+.dropbtn {
+    background-color:cadetblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: silver;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}

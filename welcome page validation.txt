@@ -1,9 +1,0 @@
-?php
-session_start();
-require_once 'connection.php';
- if(!isset($user)){
-       header('Location:authenticate.php');
-       die();
-   }
-
-?>
